@@ -32,7 +32,7 @@ pertama rilis GTA VI (392.505 penonton, mengalahkan IShowSpeed). Momen
 
 File: `gta6-clipper-01-short.mp4` (dibuat dengan ffmpeg di sesi ini).
 
-- Vertikal 1080x1920, 60fps, durasi ±41,5 detik, format blur-fill supaya
+- Vertikal 1080x1920, 60fps, durasi 39 detik, format blur-fill supaya
   gameplay utuh dan facecam Windah tetap kelihatan.
 - Hook 3 detik pertama langsung puncak momen, tanpa intro.
 - Teks layar Bahasa Indonesia besar: "WINDAH KETEMU BIGFOOT!" dan
