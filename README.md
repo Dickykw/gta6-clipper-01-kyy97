@@ -1,5 +1,9 @@
 # GTA 6 Clipper — Windah Ketemu Bigfoot
 
+[![make.fun · gta6-clipper-01](https://make.fun/badge/gta6-clipper-01.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![rank](https://make.fun/badge/gta6-clipper-01/Dickykw/gta6-clipper-01-kyy97/rank.svg)](https://make.fun/bounty/gta6-clipper-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![reward](https://make.fun/badge/gta6-clipper-01/Dickykw/gta6-clipper-01-kyy97/reward.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+
 Entry make.fun untuk bounty **gta6-clipper-01** ("Clip GTA 6 for the most
 YouTube views", hadiah $500 untuk 20 video teratas, deadline 23 November
 2026 08:00 WIB). Video-nya sendiri yang jadi entry: peringkat ditentukan
