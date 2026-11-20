@@ -9,8 +9,10 @@
 //
 // Klipnya: Windah Basudara ketemu Bigfoot di GTA VI (GAMEPLAY #3),
 // dipotong vertikal 1080x1920 dengan pitch make.fun di akhirnya.
-// VIDEO.json di sini masih placeholder — diganti alamat Short YouTube
-// aslinya begitu klip diupload publik oleh user.
+// Video aslinya sudah publik di YouTube sebagai Short:
+// https://www.youtube.com/shorts/Zk54l_KxfbA
+// (channel MomentClipers, upload 20 Nov 2026) — VIDEO.json menunjuk
+// ke alamat itu, dan gate membaca views-nya lewat YouTube Data API.
 //
 // Menjalankan lokal seperti grader:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -45,12 +47,25 @@ try {
   process.exit(1);
 }
 
+const url = (parsed as { url?: unknown }).url;
+if (typeof parsed !== "object" || parsed === null || typeof url !== "string") {
+  console.error(
+    `VIDEO.json di ${sourcePath} harus objek JSON dengan field "url" string`,
+  );
+  process.exit(1);
+}
+
+// Kontrak gate: url harus alamat video YouTube (shorts, watch, atau
+// youtu.be) dengan id 11 karakter. Kalau bentuknya salah, gagal di sini
+// dengan pesan yang jelas daripada menyerahkan file rusak ke gate.
 if (
-  typeof parsed !== "object" ||
-  parsed === null ||
-  typeof (parsed as { url?: unknown }).url !== "string"
+  !/^https:\/\/(www\.|m\.)?(youtube\.com\/(shorts\/|watch\?v=)|youtu\.be\/)[A-Za-z0-9_-]{11}/.test(
+    url,
+  )
 ) {
-  console.error('VIDEO.json harus objek JSON dengan field "url" string');
+  console.error(
+    `VIDEO.json di ${sourcePath} punya url yang bukan alamat video YouTube: ${url}`,
+  );
   process.exit(1);
 }
 
